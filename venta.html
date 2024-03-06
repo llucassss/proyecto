@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="venta.css">
+    <title>Venta de Productos</title>
+</head>
+<body>
+    <h1>Venta de Productos</h1>
+    <p id="userRole" class="admin"></p> <!-- Mostrará el rol del usuario -->
+    <form id="formularioVenta">
+        <label for="nombreProducto">Nombre del Producto:</label>
+        <input type="text" id="nombreProducto" required>
+
+        <label for="cantidadVendida">Cantidad Vendida:</label>
+        <input type="number" id="cantidadVendida" required>
+
+        <label for="precioVenta">Precio de Venta:</label>
+        <input type="number" id="precioVenta" required>
+
+        <button type="button" onclick="registrarVenta()">Registrar Venta</button>
+    </form>
+
+    <table id="tablaVentas">
+        <thead>
+            <tr>
+                <th>Nombre del Producto</th>
+                <th>Cantidad Vendida</th>
+                <th>Precio de Venta</th>
+                <th>Total</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpoTablaVentas"></tbody>
+    </table>
+    
+    <!-- Nuevo elemento h2 para mostrar el total de ventas -->
+    <h2 id="totalVentas"></h2>
+    
+    <div class="cerrar-sesion">
+        <button onclick="cerrarSesion()">Cerrar Sesión</button>
+    </div>
+    <script src="venta.js"></script>
+</body>
+</html>

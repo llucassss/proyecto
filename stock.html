@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stock.css">
+    <title>Stock de Productos</title>
+</head>
+<body>
+    <h1>Stock de Productos</h1>
+    <p id="userRole" class="admin"></p> <!-- Mostrará el rol del usuario -->
+    <form id="formularioProductos">
+        <label for="nombreProducto">Nombre del Producto:</label>
+        <input type="text" id="nombreProducto" required>
+
+        <label for="precioProducto">Precio:</label>
+        <input type="text" id="precioProducto" required>
+
+        <label for="stockProducto">Stock:</label>
+        <input type="text" id="stockProducto" required>
+
+        <label for="marcaProducto">Marca:</label>
+        <input type="text" id="marcaProducto" required>
+
+        <label for="informacionProducto">Información:</label>
+        <input type="text" id="informacionProducto" required>
+
+        <button type="button" onclick="agregarProducto()">Agregar Producto</button>
+    </form>
+    <label for="busquedaProducto">Buscar Producto:</label>
+    <input type="text" id="busquedaProducto" oninput="buscarProducto()">
+    <table id="tablaProductos">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre del Producto</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Marca</th>
+                <th>Información</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpoTablaProductos"></tbody>
+    </table>
+    
+    <button onclick="cerrarSesion()">Cerrar Sesión</button>
+    <button onclick="ventas()">VENTAS</button>
+
+    <script src="stock.js"></script>
+</body>
+</html>
